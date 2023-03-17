@@ -1,3 +1,4 @@
+export { default as Tags } from './layout/Tags';
 export { default as Input } from './tools/Input';
 export { default as Modal } from './tools/Modal';
 export { default as Loader } from './layout/Loader';
