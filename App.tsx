@@ -9,6 +9,7 @@ import {
 } from '@expo-google-fonts/noto-sans';
 
 import { Loader } from '@components/index';
+import Contexts from 'contexts';
 
 const App: React.FC = () => {
   const [loadedFonts] = useFonts({
@@ -21,11 +22,13 @@ const App: React.FC = () => {
 
   return (
     <SafeAreaProvider>
-      <StatusBar
-        barStyle="light-content"
-        backgroundColor="transparent"
-        translucent
-      />
+      <Contexts>
+        <StatusBar
+          barStyle="light-content"
+          backgroundColor="transparent"
+          translucent
+        />
+      </Contexts>
     </SafeAreaProvider>
   );
 };
