@@ -1,7 +1,7 @@
 import { Text, TouchableOpacity, View } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
 
-import { THEME } from 'styles/theme';
+import { THEME } from '@styles/theme';
 import { FCWithChildren } from 'types';
 
 import { styles } from './styles';

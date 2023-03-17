@@ -1,7 +1,7 @@
 import { StyleSheet } from 'react-native';
 import { initialWindowMetrics } from 'react-native-safe-area-context';
 
-import { THEME } from 'styles/theme';
+import { THEME } from '@styles/theme';
 
 export const styles = StyleSheet.create({
   container: {

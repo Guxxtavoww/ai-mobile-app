@@ -1,6 +1,6 @@
 import { View, ActivityIndicator } from 'react-native';
 
-import { THEME } from 'styles/theme';
+import { THEME } from '@styles/theme';
 
 import { styles } from './styles';
 

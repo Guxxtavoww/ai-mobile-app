@@ -7,7 +7,7 @@ import {
 } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
 
-import { THEME } from 'styles/theme';
+import { THEME } from '@styles/theme';
 
 import { styles } from './style';
 

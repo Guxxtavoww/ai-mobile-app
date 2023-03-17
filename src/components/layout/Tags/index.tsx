@@ -3,7 +3,7 @@ import { View, Text, Alert } from 'react-native';
 import Animated, { Layout } from 'react-native-reanimated';
 import * as Clipboard from 'expo-clipboard';
 
-import { useToast } from 'contexts/ToastContext';
+import { useToast } from '@contexts/ToastContext';
 
 import Tag from '../Tag';
 import IconButton from '../IconButton';

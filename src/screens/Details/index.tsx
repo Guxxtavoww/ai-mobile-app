@@ -2,7 +2,7 @@ import React, { useState, useCallback, useRef } from 'react';
 import { ScrollView, View, TextInput } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
-import { useToast } from 'contexts/ToastContext';
+import { useToast } from '@contexts/ToastContext';
 import {
   Button,
   Header,

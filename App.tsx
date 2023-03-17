@@ -8,9 +8,10 @@ import {
   NotoSans_800ExtraBold,
 } from '@expo-google-fonts/noto-sans';
 
-import { DetailsScreen } from 'screens';
 import { Loader } from '@components/index';
-import Contexts from 'contexts';
+
+import { DetailsScreen } from './src/screens';
+import Contexts from './src/contexts';
 
 const App: React.FC = () => {
   const [loadedFonts] = useFonts({

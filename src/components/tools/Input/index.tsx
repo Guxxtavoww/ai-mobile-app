@@ -1,7 +1,7 @@
 import { forwardRef, memo } from 'react';
 import { TextInput, TextInputProps } from 'react-native';
 
-import { THEME } from 'styles/theme';
+import { THEME } from '@styles/theme';
 
 import { styles } from './styles';
 

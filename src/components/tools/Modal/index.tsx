@@ -9,7 +9,7 @@ import { BlurView } from 'expo-blur';
 import { MaterialIcons } from '@expo/vector-icons';
 import Animated, { FadeIn } from 'react-native-reanimated';
 
-import { THEME } from 'styles/theme';
+import { THEME } from '@styles/theme';
 import { FCWithChildren } from 'types';
 
 import { styles } from './styles';
