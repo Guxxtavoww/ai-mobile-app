@@ -81,23 +81,21 @@ const DetailsScreen: React.FC = () => {
         onClose={() => setIsModalFormVisible(false)}
         title="Editar nome"
       >
-        <>
-          <Input
-            name="collectionName"
-            placeholder="Nome da coleção"
-            onChangeText={setCollectionName}
-            value={description}
-            hasMarginBottom
-          />
-          <Button
-            title="Salvar"
-            onPress={() => {
-              setDescription(collectionName);
-              setIsModalFormVisible(false);
-              handleFetchTags();
-            }}
-          />
-        </>
+        <Input
+          name="collectionName"
+          placeholder="Nome da coleção"
+          onChangeText={setCollectionName}
+          value={description}
+          hasMarginBottom
+        />
+        <Button
+          title="Salvar"
+          onPress={() => {
+            setDescription(collectionName);
+            setIsModalFormVisible(false);
+            handleFetchTags();
+          }}
+        />
       </Modal>
     </SafeAreaView>
   );
