@@ -19,7 +19,7 @@ const TextArea = forwardRef<TextInput, iTextArea>((props, ref) => {
   const { onClear, value, editable, ...rest } = props;
 
   const canShowButton = useMemo(
-    () => onClear && value && value?.length > 0,
+    () => !!onClear && !!value && value?.length > 0,
     [onClear, value]
   );
 
@@ -34,7 +34,6 @@ const TextArea = forwardRef<TextInput, iTextArea>((props, ref) => {
         ref={ref}
         {...rest}
       />
-
       {canShowButton ? (
         <TouchableOpacity style={styles.clear} onPress={onClear}>
           <MaterialIcons name="close" size={16} color={THEME.COLORS.GRAY_300} />
