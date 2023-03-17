@@ -94,6 +94,7 @@ const DetailsScreen: React.FC = () => {
             onPress={() => {
               setDescription(collectionName);
               setIsModalFormVisible(false);
+              handleFetchTags();
             }}
           />
         </>
