@@ -21,6 +21,7 @@ export const ToastProvider: FCWithChildren<{}, true> = ({ children }) => {
 
     setInterval(() => {
       setIsToastRendering(false);
+      setToastMessage('');
     }, 800);
   }, []);
 
