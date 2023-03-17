@@ -28,7 +28,9 @@ export const ToastProvider: FCWithChildren<{}, true> = ({ children }) => {
   return (
     <ToastContext.Provider value={{ toast }}>
       {children}
-      {isToastRendering ? <ToastMessage message={toastMessage} /> : null}
+      {isToastRendering && toastMessage !== '' ? (
+        <ToastMessage message={toastMessage} />
+      ) : null}
     </ToastContext.Provider>
   );
 };
