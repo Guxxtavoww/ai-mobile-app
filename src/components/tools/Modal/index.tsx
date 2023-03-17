@@ -2,6 +2,7 @@ import {
   Modal as ReactNativeModal,
   ModalProps,
   View,
+  ScrollView,
   Text,
   TouchableOpacity,
 } from 'react-native';
@@ -29,7 +30,7 @@ const Modal: FCWithChildren<iModalProps> = ({
 }) => (
   <ReactNativeModal transparent {...rest}>
     <BlurViewAnimated style={styles.overlay} entering={FadeIn} intensity={4}>
-      <View style={styles.content}>
+      <ScrollView style={styles.content}>
         <View style={styles.header}>
           <Text style={styles.title}>{title}</Text>
           <TouchableOpacity activeOpacity={0.7} onPress={onClose}>
@@ -41,7 +42,7 @@ const Modal: FCWithChildren<iModalProps> = ({
           </TouchableOpacity>
         </View>
         {children ? children : null}
-      </View>
+      </ScrollView>
     </BlurViewAnimated>
   </ReactNativeModal>
 );

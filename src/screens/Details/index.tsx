@@ -34,11 +34,13 @@ const DetailsScreen: React.FC = () => {
     await fetchTags(description)
       .then((response) => response.json())
       .then((data) => {
+        console.log(JSON.stringify(data));
         const formatedTags = formatTags(data.choices[0].text);
         setTags(formatedTags);
       })
       .catch((err) => {
         toast(`Erro: ${err.message}`);
+        console.error(err);
       })
       .finally(() => setIsLoading(false));
   }, [description]);
@@ -79,13 +81,22 @@ const DetailsScreen: React.FC = () => {
         onClose={() => setIsModalFormVisible(false)}
         title="Editar nome"
       >
-        <Input
-          name="collectionName"
-          placeholder="Nome da coleção"
-          onChangeText={setCollectionName}
-          value={collectionName}
-        />
-        <Button title="Salvar" onPress={() => setIsModalFormVisible(false)} />
+        <>
+          <Input
+            name="collectionName"
+            placeholder="Nome da coleção"
+            onChangeText={setCollectionName}
+            value={description}
+            hasMarginBottom
+          />
+          <Button
+            title="Salvar"
+            onPress={() => {
+              setDescription(collectionName);
+              setIsModalFormVisible(false);
+            }}
+          />
+        </>
       </Modal>
     </SafeAreaView>
   );

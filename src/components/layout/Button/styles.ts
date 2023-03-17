@@ -8,7 +8,8 @@ export const styles = StyleSheet.create({
     miHeight: 64,
     maxHeight: 64,
     borderRadius: 7,
-
+    paddingTop: 10,
+    paddingBottom: 10,
     alignItems: 'center',
     justifyContent: 'center',
 

@@ -38,7 +38,7 @@ export const ToastProvider: FCWithChildren<{}, true> = ({ children }) => {
 export function useToast(): iToastContextProps {
   const context = useContext(ToastContext);
 
-  if (context) {
+  if (!context) {
     Alert.alert('Usagem inválida');
     throw new Error('Usagem inválida');
   }

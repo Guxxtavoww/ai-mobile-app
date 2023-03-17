@@ -23,16 +23,16 @@ const App: React.FC = () => {
   if (!loadedFonts) return <Loader />;
 
   return (
-    <SafeAreaProvider>
-      <Contexts>
+    <Contexts>
+      <SafeAreaProvider>
         <StatusBar
           barStyle="light-content"
           backgroundColor="transparent"
           translucent
         />
         <DetailsScreen />
-      </Contexts>
-    </SafeAreaProvider>
+      </SafeAreaProvider>
+    </Contexts>
   );
 };
 

@@ -26,5 +26,6 @@ export const styles = StyleSheet.create({
     backgroundColor: THEME.COLORS.GRAY_200,
     borderRadius: 12,
     gap: 12,
+    maxHeight: 260,
   },
 });

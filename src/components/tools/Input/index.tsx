@@ -7,16 +7,17 @@ import { styles } from './styles';
 
 interface iInputProps extends TextInputProps {
   name: string;
+  hasMarginBottom?: boolean;
 }
 
 const Input = forwardRef<TextInput, iInputProps>((props, ref) => {
-  const { name, ...rest } = props;
+  const { name, hasMarginBottom, ...rest } = props;
 
   return (
     <TextInput
       id={name}
       ref={ref}
-      style={styles.container}
+      style={[styles.container, hasMarginBottom && { marginBottom: 10 }]}
       placeholderTextColor={THEME.COLORS.GRAY_300}
       {...rest}
     />
