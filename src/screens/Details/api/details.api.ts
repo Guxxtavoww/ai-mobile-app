@@ -1,5 +1,3 @@
-import { CHAT_GPD_API_KEY } from '../utils';
-
 export const fetchTags = async (fetchWhat: string) => {
   const prompt = `Generate keywords in Portuguese for a post about ${fetchWhat.trim()}.       
   Replace the spaces in each word with the character "_".
@@ -11,7 +9,7 @@ export const fetchTags = async (fetchWhat: string) => {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': `Bearer ${CHAT_GPD_API_KEY}`,
+        'Authorization': `Bearer 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`,
       },
       body: JSON.stringify({
         prompt,
