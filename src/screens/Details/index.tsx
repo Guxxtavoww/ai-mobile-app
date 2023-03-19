@@ -21,7 +21,6 @@ const DetailsScreen: React.FC = () => {
   const [tags, setTags] = useState<string[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [description, setDescription] = useState('');
-  const [collectionName, setCollectionName] = useState('Tags');
   const [isModalFormVisible, setIsModalFormVisible] = useState(false);
 
   const tagsInputRef = useRef<TextInput>(null);
@@ -47,7 +46,7 @@ const DetailsScreen: React.FC = () => {
 
   return (
     <SafeAreaView style={styles.container}>
-      <Header title={collectionName}>
+      <Header title={description || 'Tags'}>
         <IconButton
           iconName="edit"
           onPress={() => setIsModalFormVisible(true)}
@@ -84,14 +83,13 @@ const DetailsScreen: React.FC = () => {
         <Input
           name="collectionName"
           placeholder="Nome da coleção"
-          onChangeText={setCollectionName}
+          onChangeText={setDescription}
           value={description}
           hasMarginBottom
         />
         <Button
           title="Salvar"
           onPress={() => {
-            setDescription(collectionName);
             setIsModalFormVisible(false);
             handleFetchTags();
           }}

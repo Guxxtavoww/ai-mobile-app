@@ -5,8 +5,8 @@ import * as Clipboard from 'expo-clipboard';
 
 import { useToast } from '@contexts/ToastContext';
 
-import Tag from '../Tag';
 import IconButton from '../IconButton';
+import Tag from './components/Tag';
 import { styles } from './styles';
 
 interface iTagsProps {
