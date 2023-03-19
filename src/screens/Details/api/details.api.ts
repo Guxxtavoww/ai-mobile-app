@@ -1,9 +1,7 @@
 import { CHAT_GPD_API_KEY } from '../utils';
 
 export const fetchTags = async (fetchWhat: string) => {
-  const prompt = `Generate keywords in Portuguese for a post about ${fetchWhat.trim()}.       
-  Replace the spaces in each word with the character "_".
-  Return each item separated by a comma, in lowercase, and without a line break.`;
+  const prompt = `Generate keywords in Portuguese for a post about ${fetchWhat.trim()}. Replace the spaces in each word with the character "_".Return each item separated by a comma, in lowercase, and without a line break.`;
 
   return fetch(
     'https://api.openai.com/v1/engines/text-davinci-003-playground/completions',

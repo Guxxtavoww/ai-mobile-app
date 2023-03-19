@@ -11,7 +11,7 @@ interface iToastMessageProps {
 const ToastMessage: React.FC<iToastMessageProps> = ({ message }) => (
   <Animated.View
     style={styles.container}
-    entering={SlideInUp.duration(3000)}
+    entering={SlideInUp.duration(500)}
     exiting={SlideOutUp.duration(3000)}
   >
     <Text style={styles.text}>{message}</Text>
